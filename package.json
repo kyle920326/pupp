@@ -1,0 +1,24 @@
+{
+  "name": "pupp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyle920326/pupp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyle920326/pupp/issues"
+  },
+  "homepage": "https://github.com/kyle920326/pupp#readme",
+  "dependencies": {
+    "node-schedule": "^1.3.0",
+    "standard": "^12.0.1",
+    "puppeteer": "^1.6.1"
+  }
+}
