@@ -1,8 +1,7 @@
 const router = [
-    '你的地址'
+  'https://www.baidu.com'
 ]
-  
-  module.exports = function arr () {
-    return router
-  }
-  
+
+module.exports = function arr () {
+  return router
+}

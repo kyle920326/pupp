@@ -1,8 +1,8 @@
 {
     "apps": [
         {
-            "name": "everday",
-            "script": "./schedule/everyDay.js",
+            "name": "pupp-everday",
+            "script": "./src/schedule/everyDay.js",
             "log_date_format": "YYYY-MM-DD HH:mm:ss"
         }
     ]
