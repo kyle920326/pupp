@@ -33,8 +33,11 @@ module.exports = async function run (url, isMobile) {
           })
           await page.waitFor(2000)
           const _click = await page.evaluate(() => {
-            document.querySelector('.vote-btn[data-id="34"]').click();
-            return 1
+              if(document.querySelector('.vote-btn[data-id="34"]')){
+                document.querySelector('.vote-btn[data-id="34"]').click();
+                return 1
+              }
+              return 0
           })
           console.log(_click)
           await page.close()
