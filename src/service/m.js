@@ -31,10 +31,12 @@ module.exports = async function run (url, isMobile) {
             // await page.close()
             console.log(error)
           })
-          await page.waitFor(1500)
+          await page.waitFor(2000)
           const _click = await page.evaluate(() => {
-            document.querySelector('.vote-btn[data-id="34"]').click()
+            document.querySelector('.vote-btn[data-id="34"]').click();
+            return 1
           })
+          console.log(_click)
           await page.close()
         }))
 
