@@ -32,17 +32,25 @@ module.exports = async function run (url, isMobile) {
             console.log(error)
           })
           await page.waitFor(2000)
-          const _click = await page.evaluate(() => {
-              if(_url.indexOf('companyNew.html') > -1 && document.querySelector('.vote-btn[data-id="34"]')){
-                document.querySelector('.vote-btn[data-id="34"]').click();
-                return 1
-              }
-              if(_url.indexOf('personNew.html') > -1 && document.querySelector('.vote-btn[data-id="219"]')){
-                document.querySelector('.vote-btn[data-id="219"]').click();
-                return 2
-              }
-              return 0
-          })
+          let _click = null
+          if(_url.indexOf('companyNew.html') > -1 ){
+            _click = await page.evaluate(() => {
+                if(document.querySelector('.vote-btn[data-id="34"]')){
+                  document.querySelector('.vote-btn[data-id="34"]').click();
+                  return 1
+                }
+                return 0
+            })
+          }
+          if(_url.indexOf('personNew.html') > -1){
+             _click = await page.evaluate(() => {
+                if(document.querySelector('.vote-btn[data-id="219"]')){
+                  document.querySelector('.vote-btn[data-id="219"]').click();
+                  return 2
+                }
+                return 0
+            })
+          }
           console.log(_click)
           await page.close()
         }))
